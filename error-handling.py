@@ -13,7 +13,8 @@ def error_handling1():
             print('thank you')
             break
 
-# error_handling1()
+
+error_handling1()
 
 # error handling 2:
 
@@ -25,7 +26,7 @@ def sum(num1, num2):
         print(err)
 
 
-#print(sum('a', 2))
+print(sum('a', 2))
 
 
 # error handling 3:
@@ -35,6 +36,8 @@ def error_handling3():
         try:
             age = int(input("what's your age?"))
             10/age
+            raise ValueError('value error')
+            #raise Exception('exception error')
         except ValueError:
             print('please enter a number')
             continue
