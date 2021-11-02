@@ -1,6 +1,6 @@
 # error handling
 
-while True:
+""" while True:
     try:
         age = int(input("what's your age?"))
         10/age
@@ -11,3 +11,16 @@ while True:
     else:
         print('thank you')
         break
+ """
+
+# error handling 2:
+
+
+def sum(num1, num2):
+    try:
+        return num1 + num2
+    except (TypeError, ZeroDivisionError) as err:
+        print(err)
+
+
+print(sum('a', 2))
