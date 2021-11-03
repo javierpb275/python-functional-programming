@@ -11,8 +11,21 @@ def make_list(num):
     for i in range(num):
         result.append(i*2)
     return result
+# ----------------------------
 
 
-my_list = make_list(100)
+def generator_function(num):
+    for i in range(num):
+        yield i*2
 
-print(my_list)
+
+""" for item in generator_function(1000):
+    print(item) """
+
+g = generator_function(100)
+next(g)
+next(g)
+print(next(g))  # 4
+print(next(g))  # 6
+
+print(g)  # <generator object generator_function at 0x000002BE4EB01E00>
